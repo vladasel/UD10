@@ -35,7 +35,7 @@ public class Task1App {
 			} catch (InputMismatchException e) {
 				System.out.println(e);
 				intentos++;
-				break;
+				System.out.println("no has introducido un numero entero, vuelve a probar");
 			}
 			if (numUsuario != numGenerado) {
 				ayuda(numUsuario, numGenerado);
