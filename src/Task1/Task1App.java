@@ -40,6 +40,7 @@ public class Task1App {
 				ayuda(numUsuario, numGenerado);
 				intentos++;
 			} else {
+				intentos++;
 				System.out.println("has acertado el numero " + numGenerado + " en " + intentos + " intentos");
 			}
 
