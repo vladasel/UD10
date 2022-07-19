@@ -1,5 +1,9 @@
 package Task3;
 
+import java.util.Random;
+
+import exceptions.RandomException;
+
 public class Task3App {
 	/*
 	 * escribe un programa que genere un numero aleatorio q indique si el numero
@@ -15,7 +19,19 @@ public class Task3App {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Random rn = new Random();
+		String mensaje="";
+		int num = rn.nextInt(999);
+		try {
+			if (num % 2 == 0) {
+				mensaje = "par";
+			} else {
+				mensaje = "inpar";
+			}
+			throw new RandomException(mensaje);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 }
