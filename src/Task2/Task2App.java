@@ -1,5 +1,5 @@
 package Task2;
-
+import exceptions.NewException;
 public class Task2App {
 	/*
 	 * escribe un programa, que lanze y capture una excepción customizada. Crea para
@@ -15,6 +15,13 @@ public class Task2App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		try {
+			throw new NewException();
+		} catch (NewException e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		
 	}
 
 }
