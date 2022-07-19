@@ -35,6 +35,7 @@ public class Task1App {
 			} catch (InputMismatchException e) {
 				System.out.println(e);
 				intentos++;
+				break;
 			}
 			if (numUsuario != numGenerado) {
 				ayuda(numUsuario, numGenerado);
