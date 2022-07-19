@@ -69,8 +69,9 @@ public class Task1App {
 		if (num < numRandom) {
 			System.out.println("el numero que buscas es mayor");
 		} else if (num > numRandom) {
+			System.out.println("el numero que buscas es menor");
+
 		}
-		System.out.println("el numero que buscas es menor");
 	}
 
 }
