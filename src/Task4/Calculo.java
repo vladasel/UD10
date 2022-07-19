@@ -41,6 +41,21 @@ public class Calculo {
 	}
 
 	public void suma() {
+		double num1 = 0;
+		double num2 = 0;
+		double resultado = 0;
+		try {
+			num1 = Double.parseDouble(JOptionPane.showInputDialog("introduce el primer numero: "));
+		} catch (NumberFormatException e) {
+			System.out.println("introduce un numero!");
+		}
+		try {
+			num2 = Double.parseDouble(JOptionPane.showInputDialog("introduce el segundo numero: "));
+		} catch (NumberFormatException e) {
+			System.out.println("introduce un numero!");
+		}
+		resultado = num1 + num2;
+		JOptionPane.showMessageDialog(null, "la suma de " + num1 + " y " + num2 + "es " + resultado);
 
 	}
 
