@@ -32,18 +32,11 @@ public class Task1App {
 			try {
 				numUsuario = sc.nextInt();// recogemos el numero del usuario
 				
-				if (numUsuario != numGenerado) {
-					ayuda(numUsuario, numGenerado);
-					intentos++;
-				} else {
-					intentos++;
-					System.out.println("has acertado el numero " + numGenerado + " en " + intentos + " intentos");
-				}
 
 			} catch (InputMismatchException e) {
 				System.out.println(e);
 				intentos++;
-				
+				break;
 			}
 
 
