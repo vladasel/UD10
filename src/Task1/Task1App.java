@@ -24,30 +24,36 @@ public class Task1App {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int numGenerado = generarNumeroRandom();
+		int numGenerado = generarNumeroRandom();// generamos un numero
 		int intentos = 0;
-		int numUsuario;
+		int numUsuario = -1;
 		do {
-			System.out.println("introduce un numero: ");
-			// try {
-			numUsuario = sc.nextInt();
-			// }catch(InputMismatchException e) {
-			// System.out.println(e);
-			// intentos++;
-			// }
-			ayuda(numUsuario, numGenerado);
-			intentos++;
+			System.out.println("introduce un numero: ");// pedimos al usuario un numero
+			try {
+				numUsuario = sc.nextInt();// recogemos el numero del usuario
+
+			} catch (InputMismatchException e) {
+				System.out.println(e);
+				intentos++;
+			}
+			if (numUsuario != numGenerado) {
+				ayuda(numUsuario, numGenerado);
+				intentos++;
+			} else {
+				System.out.println("has acertado el numero " + numGenerado + " en " + intentos + " intentos");
+			}
+
 		} while (numUsuario != numGenerado);
 
 	}
 
 	/***
-	 * genera uhn numero random
+	 * genera un numero random
 	 * 
 	 * @return el numero generado
 	 */
 	public static int generarNumeroRandom() {
-		int num = (int) (Math.random() * (50 - 1) + 1);
+		int num = (int) (Math.random() * (10 - 1) + 1);
 		return num;
 	}
 
