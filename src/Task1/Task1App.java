@@ -31,19 +31,21 @@ public class Task1App {
 			System.out.println("introduce un numero: ");// pedimos al usuario un numero
 			try {
 				numUsuario = sc.nextInt();// recogemos el numero del usuario
+				if (numUsuario != numGenerado) {
+					ayuda(numUsuario, numGenerado);
+					intentos++;
+				} else {
+					intentos++;
+					System.out.println("has acertado el numero " + numGenerado + " en " + intentos + " intentos");
+				}
 
 			} catch (InputMismatchException e) {
 				System.out.println(e);
+				numUsuario=-1;
 				intentos++;
-				break;
+				
 			}
-			if (numUsuario != numGenerado) {
-				ayuda(numUsuario, numGenerado);
-				intentos++;
-			} else {
-				intentos++;
-				System.out.println("has acertado el numero " + numGenerado + " en " + intentos + " intentos");
-			}
+
 
 		} while (numUsuario != numGenerado);
 
