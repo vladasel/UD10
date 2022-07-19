@@ -31,6 +31,7 @@ public class Task1App {
 			System.out.println("introduce un numero: ");// pedimos al usuario un numero
 			try {
 				numUsuario = sc.nextInt();// recogemos el numero del usuario
+				
 				if (numUsuario != numGenerado) {
 					ayuda(numUsuario, numGenerado);
 					intentos++;
@@ -41,7 +42,6 @@ public class Task1App {
 
 			} catch (InputMismatchException e) {
 				System.out.println(e);
-				numUsuario=-1;
 				intentos++;
 				
 			}
