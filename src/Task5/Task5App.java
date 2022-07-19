@@ -7,7 +7,7 @@ public class Task5App {
 	 * 
 	 * -constructores:
 	 * 
-	 * uno por defecto uno con la longitud que pasemos.generará una contraseña
+	 * uno por defecto, uno con la longitud que pasemos.generará una contraseña
 	 * aleatoria con esas longitud
 	 * 
 	 * -metodos
@@ -16,7 +16,9 @@ public class Task5App {
 	 * mayusculas,mas de 1 minuscula y mas de 5 numeros
 	 * 
 	 * · generarPassword() -genera la contraseña del objeto con la longitud que
-	 * tenga getters y setters
+	 * tenga 
+	 * 
+	 * getters y setters
 	 * 
 	 * crea una clase ejecutable
 	 * 
