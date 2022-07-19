@@ -43,7 +43,7 @@ public class Task1App {
 			} catch (InputMismatchException e) {
 				System.out.println(e);
 				intentos++;
-
+				sc.next();
 			}
 
 		} while (numUsuario != numGenerado);
