@@ -18,7 +18,6 @@ public class Task3App {
 	 * asociado a la excepción capturada)
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Random rn = new Random();
 		String mensaje="";
 		int num = rn.nextInt(999);
