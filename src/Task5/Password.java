@@ -1,8 +1,5 @@
 package Task5;
 
-import java.nio.charset.Charset;
-import java.util.Random;
-
 public class Password {
 	private int longitud;
 	private String contrasena;
