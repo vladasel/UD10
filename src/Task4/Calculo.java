@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Calculo {
 
-	public void operacion() {
+	public static void operacion() {
 		int opcion = 0;
 		try {
 			opcion = Integer.parseInt(JOptionPane.showInputDialog(
@@ -40,7 +40,7 @@ public class Calculo {
 		}
 	}
 
-	public void suma() {
+	public static void suma() {
 		double num1 = 0;
 		double num2 = 0;
 		double resultado = 0;
@@ -55,11 +55,11 @@ public class Calculo {
 			System.out.println("introduce un numero!");
 		}
 		resultado = num1 + num2;
-		JOptionPane.showMessageDialog(null, "la suma de " + num1 + " y " + num2 + "es " + resultado);
+		JOptionPane.showMessageDialog(null, "la suma de " + num1 + " y " + num2 + " es " + resultado);
 
 	}
 
-	public void resta() {
+	public static void resta() {
 		double num1 = 0;
 		double num2 = 0;
 		double resultado = 0;
@@ -74,11 +74,11 @@ public class Calculo {
 			System.out.println("introduce un numero!");
 		}
 		resultado = num1 - num2;
-		JOptionPane.showMessageDialog(null, "la resta de " + num1 + " menos " + num2 + "es " + resultado);
+		JOptionPane.showMessageDialog(null, "la resta de " + num1 + " menos " + num2 + " es " + resultado);
 
 	}
 
-	public void multiplica() {
+	public static void multiplica() {
 		double num1 = 0;
 		double num2 = 0;
 		double resultado = 0;
@@ -93,11 +93,11 @@ public class Calculo {
 			System.out.println("introduce un numero!");
 		}
 		resultado = num1 * num2;
-		JOptionPane.showMessageDialog(null, "la multiplicación de " + num1 + " y " + num2 + "es " + resultado);
+		JOptionPane.showMessageDialog(null, "la multiplicación de " + num1 + " y " + num2 + " es " + resultado);
 
 	}
 
-	public void divide() {// falta controlar la división por 0
+	public static void divide() {// falta controlar la división por 0
 		double num1 = 0;
 		double num2 = 0;
 		double resultado = 0;
@@ -115,11 +115,11 @@ public class Calculo {
 
 		}
 		resultado = num1 / num2;
-		JOptionPane.showMessageDialog(null, "la división de " + num1 + " entre " + num2 + "es " + resultado);
+		JOptionPane.showMessageDialog(null, "la división de " + num1 + " entre " + num2 + " es " + resultado);
 
 	}
 
-	public void potencia() {
+	public static void potencia() {
 		double num1 = 0;
 		double num2 = 0;
 		double resultado = 0;
@@ -134,11 +134,11 @@ public class Calculo {
 			System.out.println("introduce un numero!");
 		}
 		resultado = Math.pow(num1, num2);
-		JOptionPane.showMessageDialog(null, num1 + " elevado a " + num2 + "es " + resultado);
+		JOptionPane.showMessageDialog(null, num1 + " elevado a " + num2 + " es " + resultado);
 
 	}
 
-	public void raizCuadrada() {
+	public static void raizCuadrada() {
 		double num1 = 0;
 		double resultado = 0;
 		try {
@@ -148,10 +148,10 @@ public class Calculo {
 		}
 
 		resultado = Math.sqrt(num1);
-		JOptionPane.showMessageDialog(null, "la raiz cuadrada de " + "es " + resultado);
+		JOptionPane.showMessageDialog(null, "la raiz cuadrada de " + " es " + resultado);
 	}
 
-	public void raizCubica() {
+	public static void raizCubica() {
 		double num1 = 0;
 		double resultado = 0;
 		try {
@@ -161,7 +161,7 @@ public class Calculo {
 		}
 
 		resultado = Math.cbrt(num1);
-		JOptionPane.showMessageDialog(null, "la raiz cuadrada de " + "es " + resultado);
+		JOptionPane.showMessageDialog(null, "la raiz cuadrada de " + " es " + resultado);
 	}
 
 }
