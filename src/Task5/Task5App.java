@@ -37,7 +37,14 @@ public class Task5App {
 	 * constaseña1valor_booleano1 consaseña2valor_booleanno2
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String password = Password.generarPassword(8);
+		System.out.println(password);
+		
+		if (Password.esFuerte(password)) {
+			System.out.println("Contraseña fuerte");
+		} else {
+			System.out.println("Contraseña insegura");
+		}
 
 	}
 
