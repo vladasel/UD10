@@ -97,25 +97,36 @@ public class Calculo {
 
 	}
 
-	public static void divide() {// falta controlar la división por 0
+	public static void divide() {
 		double num1 = 0;
 		double num2 = 0;
 		double resultado = 0;
+		
 		try {
 			num1 = Double.parseDouble(JOptionPane.showInputDialog("introduce el primer numero: "));
 		} catch (NumberFormatException e) {
 			System.out.println("introduce un numero!");
 		}
+		
 		try {
 			num2 = Double.parseDouble(JOptionPane.showInputDialog("introduce el segundo numero: "));
 		} catch (NumberFormatException e) {
 			System.out.println("introduce un numero!");
-		} catch (ArithmeticException e) {
-			System.out.println("Error! División por 0.");
-
 		}
-		resultado = num1 / num2;
-		JOptionPane.showMessageDialog(null, "la división de " + num1 + " entre " + num2 + " es " + resultado);
+		
+		try {
+			resultado = num1 / num2;
+			
+			if (resultado == Double.POSITIVE_INFINITY ||
+					resultado == Double.NEGATIVE_INFINITY ||
+					resultado == Double.NaN)
+                throw new ArithmeticException();
+
+			JOptionPane.showMessageDialog(null, "la división de " + num1 + " entre " + num2 + " es " + resultado);
+		} catch (ArithmeticException e) {
+			System.out.println("Error! Resultado de la división no definido");
+		}
+		
 
 	}
 
