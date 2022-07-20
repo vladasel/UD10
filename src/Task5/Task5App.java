@@ -1,5 +1,7 @@
 package Task5;
 
+import javax.swing.JOptionPane;
+
 public class Task5App {
 	/*
 	 * haz una clase llamada Password que siga las siguientes condiciones:ç - que
@@ -16,7 +18,7 @@ public class Task5App {
 	 * mayusculas,mas de 1 minuscula y mas de 5 numeros
 	 * 
 	 * · generarPassword() -genera la contraseña del objeto con la longitud que
-	 * tenga 
+	 * tenga
 	 * 
 	 * getters y setters
 	 * 
@@ -37,7 +39,24 @@ public class Task5App {
 	 * constaseña1valor_booleano1 consaseña2valor_booleanno2
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int tamaño_array = Integer.parseInt(JOptionPane.showInputDialog("Tamaño del array de contraseñas"));
+
+		Password contraseñas[] = new Password[tamaño_array];
+		boolean seguras[] = new boolean[tamaño_array];
+
+		for (int i = 0; i < tamaño_array; i++) {
+			int tamaño_contraseña = Integer.parseInt(JOptionPane.showInputDialog("Tamaño de la contraseña " + (i + 1)));
+
+			contraseñas[i] = new Password(tamaño_contraseña);
+
+			if (Password.esFuerte(contraseñas[i].getContrasena())) {
+				seguras[i] = true;
+			} else {
+				seguras[i] = false;
+			}
+			
+			System.out.println(contraseñas[i].getContrasena() + " : " + seguras[i]);
+		}
 
 	}
 
