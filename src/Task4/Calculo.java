@@ -110,6 +110,9 @@ public class Calculo {
 			num2 = Double.parseDouble(JOptionPane.showInputDialog("introduce el segundo numero: "));
 		} catch (NumberFormatException e) {
 			System.out.println("introduce un numero!");
+		} catch (ArithmeticException e) {
+			System.out.println("Error! División por 0.");
+
 		}
 		resultado = num1 / num2;
 		JOptionPane.showMessageDialog(null, "la división de " + num1 + " entre " + num2 + "es " + resultado);
